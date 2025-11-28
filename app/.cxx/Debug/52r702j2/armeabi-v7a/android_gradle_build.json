@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "/home/tndat/AndroidStudioProjects/MyApplication/app/src/main/cpp/CMakeLists.txt"
+    "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
-      "/home/tndat/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "/home/quang/Android/Sdk/cmake/3.22.1/bin/ninja",
       "-C",
-      "/home/tndat/AndroidStudioProjects/MyApplication/app/.cxx/Debug/52r702j2/armeabi-v7a",
+      "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/armeabi-v7a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "/home/tndat/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "/home/quang/Android/Sdk/cmake/3.22.1/bin/ninja",
     "-C",
-    "/home/tndat/AndroidStudioProjects/MyApplication/app/.cxx/Debug/52r702j2/armeabi-v7a",
+    "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/armeabi-v7a",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
@@ -21,14 +21,14 @@
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "chatapp",
-      "output": "/home/tndat/AndroidStudioProjects/MyApplication/app/build/intermediates/cxx/Debug/52r702j2/obj/armeabi-v7a/libchatapp.so",
+      "output": "/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/armeabi-v7a/libchatapp.so",
       "runtimeFiles": []
     }
   },
   "toolchains": {
     "toolchain": {
-      "cCompilerExecutable": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
-      "cppCompilerExecutable": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+      "cCompilerExecutable": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
     }
   },
   "cFileExtensions": [],

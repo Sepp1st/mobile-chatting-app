@@ -56,6 +56,10 @@ void handle_client(int client_fd, sockaddr_in addr) {
     sender_user_id = ntohl(sender_user_id);
     checksum = ntohl(checksum);
     (void)ts; (void)checksum;
+
+    // Use sender_user_id from packet header as the authoritative requester id
+    // when available; otherwise fall back to the session's current_user_id.
+    int requester_id = (sender_user_id != 0) ? (int)sender_user_id : (int)current_user_id;
     
     std::cout << "[C++ SERVER] Received: magic=0x" << std::hex << magic << std::dec 
               << " version=" << (int)version << " type=" << (int)type 
@@ -255,7 +259,7 @@ void handle_client(int client_fd, sockaddr_in addr) {
         
         for (auto& pair : g_users_by_name) {
           const data::User& user = pair.second;
-          if (user.id == (int)current_user_id) continue;
+          if (user.id == requester_id) continue;
           
           std::string lowerUsername = user.username;
           std::string lowerQuery = query;
@@ -265,8 +269,8 @@ void handle_client(int client_fd, sockaddr_in addr) {
                         lowerQuery.begin(), ::tolower);
           
           if (lowerUsername.find(lowerQuery) != std::string::npos) {
-            bool isFriend = g_friends[current_user_id].count(user.id) && 
-                           g_friends[current_user_id][user.id];
+            bool isFriend = g_friends[requester_id].count(user.id) && 
+                           g_friends[requester_id][user.id];
             items.push_back({"id" + std::to_string(count), std::to_string(user.id)});
             items.push_back({"name" + std::to_string(count), user.username});
             items.push_back({"phone" + std::to_string(count), user.phone});
@@ -278,7 +282,7 @@ void handle_client(int client_fd, sockaddr_in addr) {
         
         items.insert(items.begin(), {"count", std::to_string(count)});
         std::cout << "[SEARCH] Found " << count << " users matching '" << query << "'" << std::endl;
-        send_message(client_fd, proto::SUCCESS, serialize_kv(items), current_user_id);
+        send_message(client_fd, proto::SUCCESS, serialize_kv(items), requester_id);
         break;
       }
       
@@ -289,10 +293,10 @@ void handle_client(int client_fd, sockaddr_in addr) {
         
         for (auto& pair : g_users_by_id) {
           int uid = pair.first;
-          if (uid == (int)current_user_id) continue;
+          if (uid == requester_id) continue;
           std::string uname = pair.second.username;
-          bool isFriend = g_friends[current_user_id].count(uid) && 
-                         g_friends[current_user_id][uid];
+          bool isFriend = g_friends[requester_id].count(uid) && 
+                         g_friends[requester_id][uid];
           items.push_back({"id" + std::to_string(count), std::to_string(uid)});
           items.push_back({"name" + std::to_string(count), uname});
           items.push_back({"isFriend" + std::to_string(count), isFriend ? "1" : "0"});
@@ -300,7 +304,7 @@ void handle_client(int client_fd, sockaddr_in addr) {
         }
         
         items.insert(items.begin(), {"count", std::to_string(count)});
-        send_message(client_fd, proto::SUCCESS, serialize_kv(items), current_user_id);
+        send_message(client_fd, proto::SUCCESS, serialize_kv(items), requester_id);
         break;
       }
       

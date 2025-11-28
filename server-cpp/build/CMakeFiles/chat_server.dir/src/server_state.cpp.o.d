@@ -1,7 +1,7 @@
 CMakeFiles/chat_server.dir/src/server_state.cpp.o: \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/server_state.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/server_state.cpp \
  /usr/include/stdc-predef.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/server_state.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/server_state.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -139,7 +139,7 @@ CMakeFiles/chat_server.dir/src/server_state.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/data_models.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/data_models.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
@@ -167,10 +167,10 @@ CMakeFiles/chat_server.dir/src/server_state.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/network_utils.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/utils.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/network_utils.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/utils.h \
  /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/protocol.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/protocol.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \

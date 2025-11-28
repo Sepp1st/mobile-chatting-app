@@ -748,7 +748,8 @@ bool PostgresPersistence::log_activity(const std::string& log_type, int user_id,
     query += "NULL";
   }
   
-  query += ", '" + escape_string(details) + "', NOW())";
+  // store timestamp as BIGINT milliseconds since epoch to match schema
+  query += ", '" + escape_string(details) + "', (EXTRACT(EPOCH FROM NOW()) * 1000)::BIGINT)";
   
   PGresult* res = db->execute(query);
   if (!res) {

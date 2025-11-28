@@ -1,7 +1,7 @@
 CMakeFiles/chat_server.dir/src/network_utils.cpp.o: \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/network_utils.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp \
  /usr/include/stdc-predef.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/network_utils.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/network_utils.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -120,7 +120,7 @@ CMakeFiles/chat_server.dir/src/network_utils.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/protocol.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/protocol.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \

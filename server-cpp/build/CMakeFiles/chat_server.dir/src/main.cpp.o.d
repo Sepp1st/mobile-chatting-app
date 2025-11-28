@@ -1,5 +1,5 @@
 CMakeFiles/chat_server.dir/src/main.cpp.o: \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/main.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/arpa/inet.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -199,7 +199,7 @@ CMakeFiles/chat_server.dir/src/main.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/persistence.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/persistence.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
@@ -207,16 +207,16 @@ CMakeFiles/chat_server.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/data_models.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/data_models.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence_pg.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.h \
  /usr/include/postgresql/libpq-fe.h \
  /usr/include/postgresql/postgres_ext.h \
  /usr/include/postgresql/pg_config_ext.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/protocol.h \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/server_state.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/protocol.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/server_state.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/atomic \
- /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/include/message_handler.h
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/message_handler.h

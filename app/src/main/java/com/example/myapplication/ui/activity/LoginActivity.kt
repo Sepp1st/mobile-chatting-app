@@ -79,7 +79,7 @@ class LoginActivity : AppCompatActivity(), NetworkManager.MessageCallback {
     }
     
     private fun connectToServer() {
-        val host = binding.etServerHost.text.toString().ifEmpty { "192.168.1.100" }
+        val host = binding.etServerHost.text.toString().ifEmpty { "10.0.2.2"}
         val port = binding.etServerPort.text.toString().toIntOrNull() ?: 8080
         
         binding.btnConnect.isEnabled = false

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tndat/AndroidStudioProjects/MyApplication/server-cpp
+CMAKE_SOURCE_DIR = /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build
+CMAKE_BINARY_DIR = /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/chat_server.dir/depend.make
@@ -70,116 +70,116 @@ include CMakeFiles/chat_server.dir/progress.make
 include CMakeFiles/chat_server.dir/flags.make
 
 CMakeFiles/chat_server.dir/src/main.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/main.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/main.cpp
+CMakeFiles/chat_server.dir/src/main.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/main.cpp
 CMakeFiles/chat_server.dir/src/main.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chat_server.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/main.cpp.o -MF CMakeFiles/chat_server.dir/src/main.cpp.o.d -o CMakeFiles/chat_server.dir/src/main.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chat_server.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/main.cpp.o -MF CMakeFiles/chat_server.dir/src/main.cpp.o.d -o CMakeFiles/chat_server.dir/src/main.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/main.cpp
 
 CMakeFiles/chat_server.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/main.cpp > CMakeFiles/chat_server.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/main.cpp > CMakeFiles/chat_server.dir/src/main.cpp.i
 
 CMakeFiles/chat_server.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/main.cpp -o CMakeFiles/chat_server.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/main.cpp -o CMakeFiles/chat_server.dir/src/main.cpp.s
 
 CMakeFiles/chat_server.dir/src/network_utils.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/network_utils.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/network_utils.cpp
+CMakeFiles/chat_server.dir/src/network_utils.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp
 CMakeFiles/chat_server.dir/src/network_utils.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chat_server.dir/src/network_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/network_utils.cpp.o -MF CMakeFiles/chat_server.dir/src/network_utils.cpp.o.d -o CMakeFiles/chat_server.dir/src/network_utils.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/network_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chat_server.dir/src/network_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/network_utils.cpp.o -MF CMakeFiles/chat_server.dir/src/network_utils.cpp.o.d -o CMakeFiles/chat_server.dir/src/network_utils.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp
 
 CMakeFiles/chat_server.dir/src/network_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/network_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/network_utils.cpp > CMakeFiles/chat_server.dir/src/network_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp > CMakeFiles/chat_server.dir/src/network_utils.cpp.i
 
 CMakeFiles/chat_server.dir/src/network_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/network_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/network_utils.cpp -o CMakeFiles/chat_server.dir/src/network_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp -o CMakeFiles/chat_server.dir/src/network_utils.cpp.s
 
 CMakeFiles/chat_server.dir/src/utils.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/utils.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/utils.cpp
+CMakeFiles/chat_server.dir/src/utils.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/utils.cpp
 CMakeFiles/chat_server.dir/src/utils.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chat_server.dir/src/utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/utils.cpp.o -MF CMakeFiles/chat_server.dir/src/utils.cpp.o.d -o CMakeFiles/chat_server.dir/src/utils.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chat_server.dir/src/utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/utils.cpp.o -MF CMakeFiles/chat_server.dir/src/utils.cpp.o.d -o CMakeFiles/chat_server.dir/src/utils.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/utils.cpp
 
 CMakeFiles/chat_server.dir/src/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/utils.cpp > CMakeFiles/chat_server.dir/src/utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/utils.cpp > CMakeFiles/chat_server.dir/src/utils.cpp.i
 
 CMakeFiles/chat_server.dir/src/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/utils.cpp -o CMakeFiles/chat_server.dir/src/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/utils.cpp -o CMakeFiles/chat_server.dir/src/utils.cpp.s
 
 CMakeFiles/chat_server.dir/src/logger.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/logger.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/logger.cpp
+CMakeFiles/chat_server.dir/src/logger.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/logger.cpp
 CMakeFiles/chat_server.dir/src/logger.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chat_server.dir/src/logger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/logger.cpp.o -MF CMakeFiles/chat_server.dir/src/logger.cpp.o.d -o CMakeFiles/chat_server.dir/src/logger.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chat_server.dir/src/logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/logger.cpp.o -MF CMakeFiles/chat_server.dir/src/logger.cpp.o.d -o CMakeFiles/chat_server.dir/src/logger.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/logger.cpp
 
 CMakeFiles/chat_server.dir/src/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/logger.cpp > CMakeFiles/chat_server.dir/src/logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/logger.cpp > CMakeFiles/chat_server.dir/src/logger.cpp.i
 
 CMakeFiles/chat_server.dir/src/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/logger.cpp -o CMakeFiles/chat_server.dir/src/logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/logger.cpp -o CMakeFiles/chat_server.dir/src/logger.cpp.s
 
 CMakeFiles/chat_server.dir/src/persistence.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/persistence.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence.cpp
+CMakeFiles/chat_server.dir/src/persistence.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence.cpp
 CMakeFiles/chat_server.dir/src/persistence.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chat_server.dir/src/persistence.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/persistence.cpp.o -MF CMakeFiles/chat_server.dir/src/persistence.cpp.o.d -o CMakeFiles/chat_server.dir/src/persistence.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chat_server.dir/src/persistence.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/persistence.cpp.o -MF CMakeFiles/chat_server.dir/src/persistence.cpp.o.d -o CMakeFiles/chat_server.dir/src/persistence.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence.cpp
 
 CMakeFiles/chat_server.dir/src/persistence.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/persistence.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence.cpp > CMakeFiles/chat_server.dir/src/persistence.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence.cpp > CMakeFiles/chat_server.dir/src/persistence.cpp.i
 
 CMakeFiles/chat_server.dir/src/persistence.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/persistence.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence.cpp -o CMakeFiles/chat_server.dir/src/persistence.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence.cpp -o CMakeFiles/chat_server.dir/src/persistence.cpp.s
 
 CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence_pg.cpp
+CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.cpp
 CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o -MF CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o.d -o CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence_pg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o -MF CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o.d -o CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.cpp
 
 CMakeFiles/chat_server.dir/src/persistence_pg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/persistence_pg.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence_pg.cpp > CMakeFiles/chat_server.dir/src/persistence_pg.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.cpp > CMakeFiles/chat_server.dir/src/persistence_pg.cpp.i
 
 CMakeFiles/chat_server.dir/src/persistence_pg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/persistence_pg.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/persistence_pg.cpp -o CMakeFiles/chat_server.dir/src/persistence_pg.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.cpp -o CMakeFiles/chat_server.dir/src/persistence_pg.cpp.s
 
 CMakeFiles/chat_server.dir/src/server_state.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/server_state.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/server_state.cpp
+CMakeFiles/chat_server.dir/src/server_state.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/server_state.cpp
 CMakeFiles/chat_server.dir/src/server_state.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chat_server.dir/src/server_state.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/server_state.cpp.o -MF CMakeFiles/chat_server.dir/src/server_state.cpp.o.d -o CMakeFiles/chat_server.dir/src/server_state.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/server_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chat_server.dir/src/server_state.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/server_state.cpp.o -MF CMakeFiles/chat_server.dir/src/server_state.cpp.o.d -o CMakeFiles/chat_server.dir/src/server_state.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/server_state.cpp
 
 CMakeFiles/chat_server.dir/src/server_state.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/server_state.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/server_state.cpp > CMakeFiles/chat_server.dir/src/server_state.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/server_state.cpp > CMakeFiles/chat_server.dir/src/server_state.cpp.i
 
 CMakeFiles/chat_server.dir/src/server_state.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/server_state.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/server_state.cpp -o CMakeFiles/chat_server.dir/src/server_state.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/server_state.cpp -o CMakeFiles/chat_server.dir/src/server_state.cpp.s
 
 CMakeFiles/chat_server.dir/src/message_handler.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/src/message_handler.cpp.o: /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/message_handler.cpp
+CMakeFiles/chat_server.dir/src/message_handler.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/message_handler.cpp
 CMakeFiles/chat_server.dir/src/message_handler.cpp.o: CMakeFiles/chat_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chat_server.dir/src/message_handler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/message_handler.cpp.o -MF CMakeFiles/chat_server.dir/src/message_handler.cpp.o.d -o CMakeFiles/chat_server.dir/src/message_handler.cpp.o -c /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/message_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chat_server.dir/src/message_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat_server.dir/src/message_handler.cpp.o -MF CMakeFiles/chat_server.dir/src/message_handler.cpp.o.d -o CMakeFiles/chat_server.dir/src/message_handler.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/message_handler.cpp
 
 CMakeFiles/chat_server.dir/src/message_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/message_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/message_handler.cpp > CMakeFiles/chat_server.dir/src/message_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/message_handler.cpp > CMakeFiles/chat_server.dir/src/message_handler.cpp.i
 
 CMakeFiles/chat_server.dir/src/message_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/message_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/src/message_handler.cpp -o CMakeFiles/chat_server.dir/src/message_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/message_handler.cpp -o CMakeFiles/chat_server.dir/src/message_handler.cpp.s
 
 # Object files for target chat_server
 chat_server_OBJECTS = \
@@ -206,7 +206,7 @@ chat_server: CMakeFiles/chat_server.dir/src/message_handler.cpp.o
 chat_server: CMakeFiles/chat_server.dir/build.make
 chat_server: /usr/lib/x86_64-linux-gnu/libpq.so
 chat_server: CMakeFiles/chat_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable chat_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable chat_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chat_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -218,6 +218,6 @@ CMakeFiles/chat_server.dir/clean:
 .PHONY : CMakeFiles/chat_server.dir/clean
 
 CMakeFiles/chat_server.dir/depend:
-	cd /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tndat/AndroidStudioProjects/MyApplication/server-cpp /home/tndat/AndroidStudioProjects/MyApplication/server-cpp /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build /home/tndat/AndroidStudioProjects/MyApplication/server-cpp/build/CMakeFiles/chat_server.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles/chat_server.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/chat_server.dir/depend
 
