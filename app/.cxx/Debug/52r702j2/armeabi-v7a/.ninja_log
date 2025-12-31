@@ -1,16 +1,7 @@
 # ninja log v5
-1	567	1764413419760350649	CMakeFiles/chatapp.dir/socket_manager.cpp.o	77159a13ee16118d
-1	681	1764413419874646059	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	13c6eee5cd66154e
-1	761	1764413419954104113	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	dba35782a4c12834
-1	1023	1764413420215476132	CMakeFiles/chatapp.dir/native-lib.cpp.o	badb1a128d598cf3
-1	1094	1764413420284682719	CMakeFiles/chatapp.dir/message_serializer.cpp.o	d08b9a7038a8a71
-1094	1116	1764413420311835560	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/armeabi-v7a/libchatapp.so	8df6cfece3d0ea3f
-0	2	0	clean	db83fa4e6726790e
-3	390	1764418367275846713	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	13c6eee5cd66154e
-3	628	1764418367511741616	CMakeFiles/chatapp.dir/native-lib.cpp.o	badb1a128d598cf3
-3	717	1764418367599922500	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	dba35782a4c12834
-3	902	1764418367784535402	CMakeFiles/chatapp.dir/socket_manager.cpp.o	77159a13ee16118d
-3	1088	1764418367968633655	CMakeFiles/chatapp.dir/message_serializer.cpp.o	d08b9a7038a8a71
-1088	1115	1764418368001599999	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/armeabi-v7a/libchatapp.so	8df6cfece3d0ea3f
-4	845	1764519712393457884	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	dba35782a4c12834
-846	868	1764519712419771158	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/armeabi-v7a/libchatapp.so	8df6cfece3d0ea3f
+6	994	1766655581744124757	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	b33bc73969b7df2a
+4	1449	1766655582200123242	CMakeFiles/chatapp.dir/socket_manager.cpp.o	71ea298604aaa085
+0	1501	1766655582252123069	CMakeFiles/chatapp.dir/native-lib.cpp.o	54bf45ab9c78e194
+7	1532	1766655582284122963	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	743ce41e277a9c4f
+8	1610	1766655582360122710	CMakeFiles/chatapp.dir/message_serializer.cpp.o	6273c45c1b18538
+1611	1665	1766655582423122501	/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/armeabi-v7a/libchatapp.so	ccb091236b4cc682

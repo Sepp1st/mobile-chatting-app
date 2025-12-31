@@ -1,5 +1,5 @@
 CMakeFiles/test_client.dir/tools/test_client.cpp.o: \
- /home/tndat/mobile-chatting-app/server-cpp/tools/test_client.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/test_client.cpp \
  /usr/include/stdc-predef.h /usr/include/arpa/inet.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -177,8 +177,8 @@ CMakeFiles/test_client.dir/tools/test_client.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/tndat/mobile-chatting-app/server-cpp/tools/../include/protocol.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/../include/protocol.h \
  /usr/include/c++/13/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/tndat/mobile-chatting-app/server-cpp/tools/../include/network_utils.h
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/../include/network_utils.h

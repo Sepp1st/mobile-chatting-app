@@ -1,26 +1,26 @@
 {
   "buildFiles": [
-    "/home/tndat/mobile-chatting-app/app/src/main/cpp/CMakeLists.txt"
+    "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
-      "/home/tndat/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "/home/quang/Android/Sdk/cmake/3.22.1/bin/ninja",
       "-C",
-      "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+      "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "/home/tndat/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "/home/quang/Android/Sdk/cmake/3.22.1/bin/ninja",
     "-C",
-    "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+    "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
     "chatapp::@6890427a1f51a3e7e1df": {
       "artifactName": "chatapp",
       "abi": "x86_64",
-      "output": "/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64/libchatapp.so",
+      "output": "/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64/libchatapp.so",
       "runtimeFiles": []
     }
   }

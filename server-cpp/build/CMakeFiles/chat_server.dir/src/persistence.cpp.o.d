@@ -1,7 +1,7 @@
 CMakeFiles/chat_server.dir/src/persistence.cpp.o: \
- /home/tndat/mobile-chatting-app/server-cpp/src/persistence.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence.cpp \
  /usr/include/stdc-predef.h \
- /home/tndat/mobile-chatting-app/server-cpp/include/persistence.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/persistence.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -124,7 +124,7 @@ CMakeFiles/chat_server.dir/src/persistence.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/tndat/mobile-chatting-app/server-cpp/include/data_models.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/data_models.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \

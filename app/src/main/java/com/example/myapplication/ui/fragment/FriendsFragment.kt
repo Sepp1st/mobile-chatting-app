@@ -94,7 +94,7 @@ class FriendsFragment : Fragment(), NetworkManager.MessageCallback {
                 }
             }
             NetworkManager.MessageType.SUCCESS -> {
-                // Handle getFriendsList response which includes pending requests
+                // Only extract pending requests - MainActivity handles friend list
                 parseFriendsListResponse(payload)
             }
         }

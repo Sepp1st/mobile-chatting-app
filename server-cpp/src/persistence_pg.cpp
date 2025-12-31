@@ -146,7 +146,7 @@ bool PostgresPersistence::create_user(const std::string& username,
 bool PostgresPersistence::get_user_by_username(const std::string& username, 
                                                data::User& user) {
   std::string query = "SELECT id, username, password_hash, phone, is_online, "
-                     "last_seen "
+                     "(EXTRACT(EPOCH FROM last_seen) * 1000)::BIGINT "
                      "FROM users WHERE username = '" + escape_string(username) + "'";
   
   PGresult* res = db->execute(query);
@@ -168,7 +168,7 @@ bool PostgresPersistence::get_user_by_username(const std::string& username,
 
 bool PostgresPersistence::get_user_by_id(int user_id, data::User& user) {
   std::string query = "SELECT id, username, password_hash, phone, is_online, "
-                     "last_seen "
+                     "(EXTRACT(EPOCH FROM last_seen) * 1000)::BIGINT "
                      "FROM users WHERE id = " + std::to_string(user_id);
   
   PGresult* res = db->execute(query);
@@ -189,10 +189,10 @@ bool PostgresPersistence::get_user_by_id(int user_id, data::User& user) {
 }
 
 bool PostgresPersistence::update_user_online_status(int user_id, bool is_online) {
-  // Schema stores last_seen as BIGINT epoch milliseconds
+  // Convert milliseconds timestamp to TIMESTAMP for database
   std::string query = "UPDATE users SET is_online = " 
                      + std::string(is_online ? "TRUE" : "FALSE")
-                     + ", last_seen = (EXTRACT(EPOCH FROM NOW()) * 1000)::BIGINT WHERE id = "
+                     + ", last_seen = NOW() WHERE id = "
                      + std::to_string(user_id);
   
   PGresult* res = db->execute(query);
@@ -209,7 +209,7 @@ std::vector<data::User> PostgresPersistence::get_all_users() {
   std::vector<data::User> users;
   
   std::string query = "SELECT id, username, password_hash, phone, is_online, "
-                     "last_seen "
+                     "(EXTRACT(EPOCH FROM last_seen) * 1000)::BIGINT "
                      "FROM users ORDER BY username";
   
   PGresult* res = db->execute(query);
@@ -300,7 +300,7 @@ std::vector<data::User> PostgresPersistence::get_friends(int user_id) {
   std::vector<data::User> friends;
   
   std::string query = "SELECT u.id, u.username, u.password_hash, u.phone, "
-                     "u.is_online, u.last_seen "
+                     "u.is_online, (EXTRACT(EPOCH FROM u.last_seen) * 1000)::BIGINT "
                      "FROM v_user_friends vuf JOIN users u ON vuf.friend_id = u.id "
                      "WHERE vuf.user_id = " + std::to_string(user_id)
                      + " ORDER BY u.username";
@@ -450,12 +450,13 @@ bool PostgresPersistence::has_pending_request(int from_user_id, int to_user_id) 
 bool PostgresPersistence::save_message(int from_user_id, int to_user_id,
                                       const std::string& content,
                                       long long timestamp) {
+  // Convert milliseconds to PostgreSQL timestamp
   std::string query = "INSERT INTO messages (from_user_id, to_user_id, content, "
                      "timestamp, is_read) VALUES ("
                      + std::to_string(from_user_id) + ", "
                      + std::to_string(to_user_id) + ", '"
                      + escape_string(content) + "', "
-                     + std::to_string(timestamp) + ", FALSE)";
+                     + "TO_TIMESTAMP(" + std::to_string(timestamp) + " / 1000.0), FALSE)";
   
   PGresult* res = db->execute(query);
   if (!res) {
@@ -471,8 +472,9 @@ std::vector<data::Message> PostgresPersistence::get_conversation(int user_id_1,
                                                                  int limit) {
   std::vector<data::Message> messages;
   
+  // Extract timestamp as milliseconds using EXTRACT(EPOCH)
   std::string query = "SELECT id, from_user_id, to_user_id, content, "
-                     "timestamp, is_read "
+                     "(EXTRACT(EPOCH FROM timestamp) * 1000)::BIGINT as timestamp, is_read "
                      "FROM messages WHERE "
                      "(from_user_id = " + std::to_string(user_id_1) +
                      " AND to_user_id = " + std::to_string(user_id_2) + ") OR "
@@ -613,33 +615,9 @@ bool PostgresPersistence::add_group_member(int group_id, int user_id) {
   return true;
 }
 
-bool PostgresPersistence::set_group_nickname(int group_id, int user_id, const std::string& nickname) {
-  std::string query = "UPDATE group_members SET nickname = '" + escape_string(nickname) + "' "
-                     "WHERE group_id = " + std::to_string(group_id) + " AND user_id = " + std::to_string(user_id);
-  PGresult* res = db->execute(query);
-  if (!res) return false;
-  PQclear(res);
-  log_activity("GROUP_NICKNAME_SET", user_id, 0, "groupId=" + std::to_string(group_id) + " nick=" + nickname);
-  return true;
-}
+// Nickname functionality removed - no longer needed
 
-std::unordered_map<int, std::string> PostgresPersistence::get_group_member_nicknames(int group_id) {
-  std::unordered_map<int, std::string> result;
-  std::string query = "SELECT user_id, nickname FROM group_members WHERE group_id = " + std::to_string(group_id);
-  PGresult* res = db->execute(query);
-  if (!res) return result;
-  int rows = PQntuples(res);
-  for (int i = 0; i < rows; ++i) {
-    int uid = std::stoi(PQgetvalue(res, i, 0));
-    if (PQgetisnull(res, i, 1)) {
-      result[uid] = std::string();
-    } else {
-      result[uid] = PQgetvalue(res, i, 1);
-    }
-  }
-  PQclear(res);
-  return result;
-}
+// Nickname functionality removed - no longer needed
 
 bool PostgresPersistence::remove_group_member(int group_id, int user_id) {
   std::string query = "DELETE FROM group_members WHERE group_id = "
@@ -718,7 +696,7 @@ std::vector<data::User> PostgresPersistence::get_group_members(int group_id) {
   std::vector<data::User> members;
   
   std::string query = "SELECT u.id, u.username, u.password_hash, u.phone, "
-                     "u.is_online, u.last_seen "
+                     "u.is_online, (EXTRACT(EPOCH FROM u.last_seen) * 1000)::BIGINT "
                      "FROM users u JOIN group_members gm ON u.id = gm.user_id "
                      "WHERE gm.group_id = " + std::to_string(group_id)
                      + " ORDER BY u.username";
@@ -840,36 +818,53 @@ bool PostgresPersistence::rename_group(int group_id, const std::string& new_name
 bool PostgresPersistence::save_group_message(int group_id, int user_id,
                                             const std::string& content,
                                             long long timestamp) {
-  // `group_messages.timestamp` is a BIGINT storing epoch milliseconds
+  std::cout << "[DEBUG] save_group_message called: gid=" << group_id 
+            << " uid=" << user_id << " timestamp=" << timestamp 
+            << " content='" << content << "'" << std::endl;
+  
+  // Convert milliseconds to PostgreSQL timestamp
   std::string query = "INSERT INTO group_messages (group_id, user_id, content, timestamp) VALUES (" 
                      + std::to_string(group_id) + ", " + std::to_string(user_id) + ", '"
-                     + escape_string(content) + "', " + std::to_string(timestamp) + ")";
+                     + escape_string(content) + "', TO_TIMESTAMP(" + std::to_string(timestamp) + " / 1000.0))";
+  
+  std::cout << "[DEBUG] Executing query: " << query << std::endl;
   
   PGresult* res = db->execute(query);
   if (!res) {
+    std::cerr << "[ERROR] save_group_message failed for gid=" << group_id << std::endl;
     return false;
   }
   
+  std::cout << "[DEBUG] save_group_message successful for gid=" << group_id << std::endl;
   PQclear(res);
   return true;
 }
 
 std::vector<data::GroupMessage> PostgresPersistence::get_group_messages(int group_id,
                                                                         int limit) {
+  std::cout << "[DEBUG] get_group_messages called: gid=" << group_id 
+            << " limit=" << limit << std::endl;
+  
   std::vector<data::GroupMessage> messages;
   
-  // `group_messages.timestamp` is stored as BIGINT (epoch milliseconds)
-  std::string query = "SELECT id, group_id, user_id, content, timestamp "
+  // Extract timestamp as milliseconds using EXTRACT(EPOCH)
+  std::string query = "SELECT id, group_id, user_id, content, "
+                     "(EXTRACT(EPOCH FROM timestamp) * 1000)::BIGINT as timestamp "
                      "FROM group_messages WHERE group_id = "
                      + std::to_string(group_id)
                      + " ORDER BY timestamp DESC LIMIT " + std::to_string(limit);
   
+  std::cout << "[DEBUG] Executing query: " << query << std::endl;
+  
   PGresult* res = db->execute(query);
   if (!res) {
+    std::cerr << "[ERROR] get_group_messages query failed for gid=" << group_id << std::endl;
     return messages;
   }
   
   int rows = PQntuples(res);
+  std::cout << "[DEBUG] get_group_messages returned " << rows << " rows for gid=" << group_id << std::endl;
+  
   for (int i = 0; i < rows; i++) {
     data::GroupMessage msg;
     msg.id = std::stoi(PQgetvalue(res, i, 0));
@@ -878,6 +873,8 @@ std::vector<data::GroupMessage> PostgresPersistence::get_group_messages(int grou
     msg.content = PQgetvalue(res, i, 3);
     msg.timestamp = std::stoll(PQgetvalue(res, i, 4));
     messages.push_back(msg);
+    std::cout << "[DEBUG]   Message " << i << ": id=" << msg.id 
+              << " uid=" << msg.user_id << " content='" << msg.content << "'" << std::endl;
   }
   
   PQclear(res);
@@ -894,7 +891,7 @@ std::vector<data::GroupMessage> PostgresPersistence::get_group_messages(int grou
 bool PostgresPersistence::log_activity(const std::string& log_type, int user_id,
                                       int target_user_id, const std::string& details) {
   std::string query = "INSERT INTO activity_logs (log_type, user_id, target_user_id, "
-                     "details, timestamp) VALUES ('" + escape_string(log_type) + "', "
+                     "details, created_at) VALUES ('" + escape_string(log_type) + "', "
                      + std::to_string(user_id) + ", ";
   
   if (target_user_id > 0) {
@@ -904,7 +901,7 @@ bool PostgresPersistence::log_activity(const std::string& log_type, int user_id,
   }
   
   // store timestamp as BIGINT milliseconds since epoch to match schema
-  query += ", '" + escape_string(details) + "', (EXTRACT(EPOCH FROM NOW()) * 1000)::BIGINT)";
+  query += ", '" + escape_string(details) + "', NOW())";
   
   PGresult* res = db->execute(query);
   if (!res) {

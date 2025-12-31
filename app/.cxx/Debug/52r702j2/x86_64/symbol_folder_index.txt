@@ -1,1 +1,1 @@
-/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64
+/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64

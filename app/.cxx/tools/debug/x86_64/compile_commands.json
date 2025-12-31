@@ -1,27 +1,27 @@
 [
 {
-  "directory": "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
-  "command": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/tndat/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/native-lib.cpp.o -c /home/tndat/mobile-chatting-app/app/src/main/cpp/native-lib.cpp",
-  "file": "/home/tndat/mobile-chatting-app/app/src/main/cpp/native-lib.cpp"
+  "directory": "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+  "command": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/native-lib.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/native-lib.cpp",
+  "file": "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/native-lib.cpp"
 },
 {
-  "directory": "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
-  "command": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/tndat/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/socket_manager.cpp.o -c /home/tndat/mobile-chatting-app/app/src/main/cpp/socket_manager.cpp",
-  "file": "/home/tndat/mobile-chatting-app/app/src/main/cpp/socket_manager.cpp"
+  "directory": "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+  "command": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/socket_manager.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/socket_manager.cpp",
+  "file": "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/socket_manager.cpp"
 },
 {
-  "directory": "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
-  "command": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/tndat/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/protocol_handler.cpp.o -c /home/tndat/mobile-chatting-app/app/src/main/cpp/protocol_handler.cpp",
-  "file": "/home/tndat/mobile-chatting-app/app/src/main/cpp/protocol_handler.cpp"
+  "directory": "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+  "command": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/protocol_handler.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/protocol_handler.cpp",
+  "file": "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/protocol_handler.cpp"
 },
 {
-  "directory": "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
-  "command": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/tndat/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/crypto_utils.cpp.o -c /home/tndat/mobile-chatting-app/app/src/main/cpp/crypto_utils.cpp",
-  "file": "/home/tndat/mobile-chatting-app/app/src/main/cpp/crypto_utils.cpp"
+  "directory": "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+  "command": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/crypto_utils.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/crypto_utils.cpp",
+  "file": "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/crypto_utils.cpp"
 },
 {
-  "directory": "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
-  "command": "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/tndat/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/message_serializer.cpp.o -c /home/tndat/mobile-chatting-app/app/src/main/cpp/message_serializer.cpp",
-  "file": "/home/tndat/mobile-chatting-app/app/src/main/cpp/message_serializer.cpp"
+  "directory": "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64",
+  "command": "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dchatapp_EXPORTS -I/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -std=c++17 -o CMakeFiles/chatapp.dir/message_serializer.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/message_serializer.cpp",
+  "file": "/home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp/message_serializer.cpp"
 }
 ]

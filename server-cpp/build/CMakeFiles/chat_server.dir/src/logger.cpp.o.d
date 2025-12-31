@@ -1,7 +1,7 @@
 CMakeFiles/chat_server.dir/src/logger.cpp.o: \
- /home/tndat/mobile-chatting-app/server-cpp/src/logger.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/logger.cpp \
  /usr/include/stdc-predef.h \
- /home/tndat/mobile-chatting-app/server-cpp/include/logger.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/logger.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

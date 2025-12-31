@@ -1,16 +1,7 @@
 # ninja log v5
-0	358	1764413420871207980	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	6b61c6cab1d2cc6
-0	628	1764413421137498487	CMakeFiles/chatapp.dir/message_serializer.cpp.o	6097bbb13ff9e22
-0	667	1764413421178451987	CMakeFiles/chatapp.dir/native-lib.cpp.o	63ec43f53bcd18a1
-0	835	1764413421347738065	CMakeFiles/chatapp.dir/socket_manager.cpp.o	5987401f90e78de6
-0	956	1764413421465856515	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	9d151172e9e871fb
-956	979	1764413421492815141	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86/libchatapp.so	2a0e96e293b968aa
-0	2	0	clean	db83fa4e6726790e
-4	558	1764418368571061257	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	9d151172e9e871fb
-4	593	1764418368605357841	CMakeFiles/chatapp.dir/message_serializer.cpp.o	6097bbb13ff9e22
-4	649	1764418368662905300	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	6b61c6cab1d2cc6
-4	713	1764418368727004263	CMakeFiles/chatapp.dir/native-lib.cpp.o	63ec43f53bcd18a1
-4	838	1764418368850442291	CMakeFiles/chatapp.dir/socket_manager.cpp.o	5987401f90e78de6
-838	862	1764418368878580867	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86/libchatapp.so	2a0e96e293b968aa
-4	831	1764519713261854404	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	9d151172e9e871fb
-831	853	1764519713287515068	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86/libchatapp.so	2a0e96e293b968aa
+3	994	1766655583907117570	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	3b8ad96db768cbb2
+1	1346	1766655584261116395	CMakeFiles/chatapp.dir/socket_manager.cpp.o	1ba45bb2bcf41f2d
+0	1908	1766655584742114796	CMakeFiles/chatapp.dir/native-lib.cpp.o	8eea7841a0876f66
+8	2083	1766655584999113942	CMakeFiles/chatapp.dir/message_serializer.cpp.o	cdc35b42dc133b25
+7	2134	1766655585051113770	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	a0676c4c27f418c3
+2134	2371	1766655585254113095	/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86/libchatapp.so	cadeda2738b5d93d

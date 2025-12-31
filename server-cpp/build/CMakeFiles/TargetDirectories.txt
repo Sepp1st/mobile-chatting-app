@@ -1,4 +1,4 @@
-/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles/chat_server.dir
-/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles/test_client.dir
-/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles/edit_cache.dir
-/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles/rebuild_cache.dir
+/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles/chat_server.dir
+/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles/test_client.dir
+/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles/edit_cache.dir
+/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles/rebuild_cache.dir

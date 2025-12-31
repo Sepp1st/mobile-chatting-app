@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tndat/mobile-chatting-app/server-cpp
+CMAKE_SOURCE_DIR = /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tndat/mobile-chatting-app/server-cpp/build
+CMAKE_BINARY_DIR = /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_client.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/test_client.dir/progress.make
 include CMakeFiles/test_client.dir/flags.make
 
 CMakeFiles/test_client.dir/tools/test_client.cpp.o: CMakeFiles/test_client.dir/flags.make
-CMakeFiles/test_client.dir/tools/test_client.cpp.o: /home/tndat/mobile-chatting-app/server-cpp/tools/test_client.cpp
+CMakeFiles/test_client.dir/tools/test_client.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/test_client.cpp
 CMakeFiles/test_client.dir/tools/test_client.cpp.o: CMakeFiles/test_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_client.dir/tools/test_client.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_client.dir/tools/test_client.cpp.o -MF CMakeFiles/test_client.dir/tools/test_client.cpp.o.d -o CMakeFiles/test_client.dir/tools/test_client.cpp.o -c /home/tndat/mobile-chatting-app/server-cpp/tools/test_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_client.dir/tools/test_client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_client.dir/tools/test_client.cpp.o -MF CMakeFiles/test_client.dir/tools/test_client.cpp.o.d -o CMakeFiles/test_client.dir/tools/test_client.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/test_client.cpp
 
 CMakeFiles/test_client.dir/tools/test_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_client.dir/tools/test_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/mobile-chatting-app/server-cpp/tools/test_client.cpp > CMakeFiles/test_client.dir/tools/test_client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/test_client.cpp > CMakeFiles/test_client.dir/tools/test_client.cpp.i
 
 CMakeFiles/test_client.dir/tools/test_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_client.dir/tools/test_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/mobile-chatting-app/server-cpp/tools/test_client.cpp -o CMakeFiles/test_client.dir/tools/test_client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/test_client.cpp -o CMakeFiles/test_client.dir/tools/test_client.cpp.s
 
 CMakeFiles/test_client.dir/src/network_utils.cpp.o: CMakeFiles/test_client.dir/flags.make
-CMakeFiles/test_client.dir/src/network_utils.cpp.o: /home/tndat/mobile-chatting-app/server-cpp/src/network_utils.cpp
+CMakeFiles/test_client.dir/src/network_utils.cpp.o: /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp
 CMakeFiles/test_client.dir/src/network_utils.cpp.o: CMakeFiles/test_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_client.dir/src/network_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_client.dir/src/network_utils.cpp.o -MF CMakeFiles/test_client.dir/src/network_utils.cpp.o.d -o CMakeFiles/test_client.dir/src/network_utils.cpp.o -c /home/tndat/mobile-chatting-app/server-cpp/src/network_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_client.dir/src/network_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_client.dir/src/network_utils.cpp.o -MF CMakeFiles/test_client.dir/src/network_utils.cpp.o.d -o CMakeFiles/test_client.dir/src/network_utils.cpp.o -c /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp
 
 CMakeFiles/test_client.dir/src/network_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_client.dir/src/network_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tndat/mobile-chatting-app/server-cpp/src/network_utils.cpp > CMakeFiles/test_client.dir/src/network_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp > CMakeFiles/test_client.dir/src/network_utils.cpp.i
 
 CMakeFiles/test_client.dir/src/network_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_client.dir/src/network_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tndat/mobile-chatting-app/server-cpp/src/network_utils.cpp -o CMakeFiles/test_client.dir/src/network_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp -o CMakeFiles/test_client.dir/src/network_utils.cpp.s
 
 # Object files for target test_client
 test_client_OBJECTS = \
@@ -109,7 +109,7 @@ test_client: CMakeFiles/test_client.dir/tools/test_client.cpp.o
 test_client: CMakeFiles/test_client.dir/src/network_utils.cpp.o
 test_client: CMakeFiles/test_client.dir/build.make
 test_client: CMakeFiles/test_client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test_client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/test_client.dir/clean:
 .PHONY : CMakeFiles/test_client.dir/clean
 
 CMakeFiles/test_client.dir/depend:
-	cd /home/tndat/mobile-chatting-app/server-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tndat/mobile-chatting-app/server-cpp /home/tndat/mobile-chatting-app/server-cpp /home/tndat/mobile-chatting-app/server-cpp/build /home/tndat/mobile-chatting-app/server-cpp/build /home/tndat/mobile-chatting-app/server-cpp/build/CMakeFiles/test_client.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/build/CMakeFiles/test_client.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/test_client.dir/depend
 

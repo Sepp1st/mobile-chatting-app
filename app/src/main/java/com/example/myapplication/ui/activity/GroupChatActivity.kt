@@ -1,6 +1,7 @@
 package com.example.myapplication.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -155,12 +156,22 @@ class GroupChatActivity : AppCompatActivity() {
 
             adapter.notifyDataSetChanged()
             if (messagesList.isNotEmpty()) recyclerView.scrollToPosition(messagesList.size - 1)
-            // If no persisted messages and we haven't requested history yet, ask server
-            if (dbMessages.isEmpty() && !historyLoaded && networkManager.isConnected()) {
-                historyLoaded = true // avoid duplicate requests
-                chatViewModel.loadGroupHistory(groupId)
-            }
         })
+        
+        // Always load history from server on first open to ensure we have latest messages
+        if (!historyLoaded && networkManager.isConnected()) {
+            historyLoaded = true
+            // Clear local messages for this group before loading from server
+            lifecycleScope.launch(Dispatchers.IO) {
+                try {
+                    db.messageDao().deleteGroupMessages(groupId)
+                    Log.d("GroupChatActivity", "Cleared local group messages for groupId=$groupId")
+                } catch (e: Exception) {
+                    Log.e("GroupChatActivity", "Error clearing group messages", e)
+                }
+            }
+            chatViewModel.loadGroupHistory(groupId)
+        }
         
         setupNetworkCallback()
         setupSendButton()

@@ -1,16 +1,7 @@
 # ninja log v5
-0	475	1764413422173808535	CMakeFiles/chatapp.dir/socket_manager.cpp.o	70cc3a38990fd618
-0	494	1764413422191842784	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	2bf09e8dcb56811c
-1	537	1764413422235055051	CMakeFiles/chatapp.dir/message_serializer.cpp.o	cf6011e99dbf87bf
-0	568	1764413422268417526	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	15c0a3642e77d23
-0	914	1764413422609839619	CMakeFiles/chatapp.dir/native-lib.cpp.o	c6af1c05bcecda2a
-914	944	1764413422642795292	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64/libchatapp.so	5b5b4e2804113b87
-0	2	0	clean	db83fa4e6726790e
-4	436	1764418369327476462	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	15c0a3642e77d23
-4	528	1764418369417608909	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	2bf09e8dcb56811c
-4	566	1764418369454475097	CMakeFiles/chatapp.dir/message_serializer.cpp.o	cf6011e99dbf87bf
-3	673	1764418369561644166	CMakeFiles/chatapp.dir/native-lib.cpp.o	c6af1c05bcecda2a
-4	809	1764418369697662356	CMakeFiles/chatapp.dir/socket_manager.cpp.o	70cc3a38990fd618
-809	831	1764418369723562440	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64/libchatapp.so	5b5b4e2804113b87
-4	836	1764519714134768773	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	2bf09e8dcb56811c
-836	859	1764519714161535723	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64/libchatapp.so	5b5b4e2804113b87
+7	925	1766655586968107401	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	ef5724c6eae25a41
+3	1335	1766655587369106068	CMakeFiles/chatapp.dir/socket_manager.cpp.o	d56e8ce0baf68d01
+0	1434	1766655587473105723	CMakeFiles/chatapp.dir/native-lib.cpp.o	641020a9f8dd4790
+10	1489	1766655587527105543	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	9a8db2b598925074
+12	1528	1766655587563105424	CMakeFiles/chatapp.dir/message_serializer.cpp.o	466fbbb32c4c2abb
+1528	1613	1766655587652105128	/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/x86_64/libchatapp.so	ee1899cb48bac216

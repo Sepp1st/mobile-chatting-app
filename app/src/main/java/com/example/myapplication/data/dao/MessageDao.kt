@@ -44,4 +44,7 @@ interface MessageDao {
     
     @Query("DELETE FROM messages WHERE ((senderId = :currentUserId AND recipientId = :otherUserId) OR (senderId = :otherUserId AND recipientId = :currentUserId)) AND groupId IS NULL")
     suspend fun deleteConversation(currentUserId: Int, otherUserId: Int)
+    
+    @Query("DELETE FROM messages WHERE groupId = :groupId")
+    suspend fun deleteGroupMessages(groupId: Int)
 }

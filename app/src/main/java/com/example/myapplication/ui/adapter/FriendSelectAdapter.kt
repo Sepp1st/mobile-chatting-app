@@ -39,8 +39,9 @@ class FriendSelectAdapter(
                 checkbox.isChecked = selectedIds.contains(friend.userId)
                 
                 root.setOnClickListener {
-                    checkbox.isChecked = !checkbox.isChecked
-                    toggleSelection(friend.userId)
+                    val newCheckedState = !checkbox.isChecked
+                    checkbox.isChecked = newCheckedState
+                    toggleSelection(friend.userId, newCheckedState)
                 }
                 
                 checkbox.setOnCheckedChangeListener { _, isChecked ->
@@ -54,11 +55,11 @@ class FriendSelectAdapter(
             }
         }
         
-        private fun toggleSelection(userId: Int) {
-            if (selectedIds.contains(userId)) {
-                selectedIds.remove(userId)
-            } else {
+        private fun toggleSelection(userId: Int, isSelected: Boolean) {
+            if (isSelected) {
                 selectedIds.add(userId)
+            } else {
+                selectedIds.remove(userId)
             }
             onSelectionChanged(selectedIds)
         }

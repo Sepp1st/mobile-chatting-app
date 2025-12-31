@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/tndat/mobile-chatting-app/server-cpp/include -I/usr/include/postgresql
+CXX_INCLUDES = -I/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include -I/usr/include/postgresql
 
 CXX_FLAGS = -std=gnu++17
 

@@ -15,9 +15,9 @@ int main() {
   // Initialize PostgreSQL persistence
   std::string conn_str = "host=localhost port=5432 dbname=chat_app "
                         "user=chat_app_user password=chat_app_password";
-  
+
   auto pg_persistence = std::make_shared<persistence::PostgresPersistence>(conn_str);
-  
+
   if (!pg_persistence->initialize()) {
     std::cerr << "[C++ SERVER] Failed to connect to PostgreSQL database" << std::endl;
     std::cerr << "[C++ SERVER] Falling back to file-based persistence" << std::endl;
@@ -34,7 +34,6 @@ int main() {
     server_state::g_next_user_id = next_id;
   } else {
     std::cout << "[C++ SERVER] Connected to PostgreSQL successfully" << std::endl;
-    
     // Load all users from database into memory cache
     std::vector<data::User> all_users = pg_persistence->get_all_users();
     int max_id = 0;

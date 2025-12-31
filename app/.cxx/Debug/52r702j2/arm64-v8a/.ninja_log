@@ -1,16 +1,7 @@
 # ninja log v5
-0	488	1764413418482827080	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	a80dce8c7dce2afd
-1	757	1764413418749312707	CMakeFiles/chatapp.dir/message_serializer.cpp.o	b8644126d4272f2b
-0	761	1764413418753008462	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	597775dda35bb9a8
-0	884	1764413418876013972	CMakeFiles/chatapp.dir/socket_manager.cpp.o	2fca46aa19683ecb
-0	944	1764413418935470297	CMakeFiles/chatapp.dir/native-lib.cpp.o	90ce539a469ec3df
-944	973	1764413418968858822	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/arm64-v8a/libchatapp.so	d8211d85aa9b130
-0	2	0	clean	db83fa4e6726790e
-4	725	1764418366248901669	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	a80dce8c7dce2afd
-3	894	1764418366418693370	CMakeFiles/chatapp.dir/native-lib.cpp.o	90ce539a469ec3df
-4	1037	1764418366561927315	CMakeFiles/chatapp.dir/message_serializer.cpp.o	b8644126d4272f2b
-4	1079	1764418366600589548	CMakeFiles/chatapp.dir/socket_manager.cpp.o	2fca46aa19683ecb
-4	1198	1764418366722666679	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	597775dda35bb9a8
-1198	1271	1764418366798626258	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/arm64-v8a/libchatapp.so	d8211d85aa9b130
-4	854	1764519711471725632	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	597775dda35bb9a8
-854	913	1764519711535463260	/home/tndat/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/arm64-v8a/libchatapp.so	d8211d85aa9b130
+4	1187	1766655579657131691	CMakeFiles/chatapp.dir/protocol_handler.cpp.o	11038af133e9f937
+4	1446	1766655579913130840	CMakeFiles/chatapp.dir/socket_manager.cpp.o	71d7d754eaec64f5
+0	1639	1766655580105130202	CMakeFiles/chatapp.dir/native-lib.cpp.o	62b4da5d5851394c
+5	1737	1766655580202129880	CMakeFiles/chatapp.dir/crypto_utils.cpp.o	bc241722fac651d0
+5	1795	1766655580263129677	CMakeFiles/chatapp.dir/message_serializer.cpp.o	c9e2bd83e05baf35
+1795	1834	1766655580310129522	/home/quang/Documents/GitHub/mobile-chatting-app/app/build/intermediates/cxx/Debug/52r702j2/obj/arm64-v8a/libchatapp.so	d561e1c07305bdf1

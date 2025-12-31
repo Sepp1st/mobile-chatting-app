@@ -1,4 +1,4 @@
-# Install script for directory: /home/tndat/mobile-chatting-app/app/src/main/cpp
+# Install script for directory: /home/quang/Documents/GitHub/mobile-chatting-app/app/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/tndat/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-objdump")
+  set(CMAKE_OBJDUMP "/home/quang/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tndat/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/quang/Documents/GitHub/mobile-chatting-app/app/.cxx/Debug/52r702j2/x86_64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

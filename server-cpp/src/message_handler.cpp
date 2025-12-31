@@ -62,6 +62,14 @@ void handle_client(int client_fd, sockaddr_in addr) {
     // when available; otherwise fall back to the session's current_user_id.
     int requester_id = (sender_user_id != 0) ? (int)sender_user_id : (int)current_user_id;
     
+    // Update current_user_id to match the requester (for authenticated requests)
+    // This ensures all handlers use the correct user ID even if client reconnected
+    if (sender_user_id != 0 && current_user_id == 0) {
+      current_user_id = sender_user_id;
+      std::cout << "[C++ SERVER] Updated session user ID from packet header: userId=" 
+                << current_user_id << std::endl;
+    }
+    
     std::cout << "[C++ SERVER] Received: magic=0x" << std::hex << magic << std::dec 
               << " version=" << (int)version << " type=" << (int)type 
               << " length=" << length << std::endl;
@@ -596,9 +604,17 @@ void handle_client(int client_fd, sockaddr_in addr) {
         
         long long timestamp = time(nullptr) * 1000; // milliseconds
         
-        // Save message to database
+        // Save message to database (log failure if it doesn't persist)
+        bool saved_to_db = false;
         if (g_pg_persistence) {
-          g_pg_persistence->save_message(current_user_id, recipientId, message, timestamp);
+          saved_to_db = g_pg_persistence->save_message(current_user_id, recipientId, message, timestamp);
+          if (!saved_to_db) {
+            std::cerr << "[PERSISTENCE] Failed to save direct message from userId=" << current_user_id
+                      << " to userId=" << recipientId << std::endl;
+          }
+        } else {
+          std::cerr << "[PERSISTENCE] No PostgreSQL persistence configured; skipping message save for userId="
+                    << current_user_id << " -> " << recipientId << std::endl;
         }
         
         auto out = serialize_kv({
@@ -653,10 +669,14 @@ void handle_client(int client_fd, sockaddr_in addr) {
         int gid = std::stoi(kv["groupId"]);
         int limit = kv.count("limit") ? std::stoi(kv["limit"]) : 50;
 
+        std::cout << "[DEBUG] GET_GROUP_HISTORY: gid=" << gid << " limit=" << limit 
+                  << " userId=" << current_user_id << std::endl;
+
         // Check membership before returning history
         bool is_member = false;
         if (g_pg_persistence) {
           auto members = g_pg_persistence->get_group_members(gid);
+          std::cout << "[DEBUG] Group has " << members.size() << " members" << std::endl;
           for (auto& m : members) {
             if (m.id == (int)current_user_id) {
               is_member = true;
@@ -671,12 +691,16 @@ void handle_client(int client_fd, sockaddr_in addr) {
           }
         }
         
+        std::cout << "[DEBUG] User " << current_user_id << " is_member=" << is_member << std::endl;
+        
         if (!is_member) {
           send_message(client_fd, proto::ERROR, "Not in group", current_user_id);
           break;
         }
 
+        std::cout << "[DEBUG] Calling get_group_messages for gid=" << gid << std::endl;
         auto messages = g_pg_persistence ? g_pg_persistence->get_group_messages(gid, limit) : std::vector<data::GroupMessage>();
+        std::cout << "[DEBUG] Retrieved " << messages.size() << " messages from database" << std::endl;
 
         std::vector<std::pair<std::string, std::string>> items;
         items.push_back(std::make_pair("groupId", std::to_string(gid)));
@@ -684,12 +708,15 @@ void handle_client(int client_fd, sockaddr_in addr) {
 
         for (size_t i = 0; i < messages.size(); i++) {
           auto& msg = messages[messages.size() - 1 - i]; // chronological order
+          std::cout << "[DEBUG]   Msg " << i << ": from=" << msg.user_id 
+                    << " content='" << msg.content << "'" << std::endl;
           items.push_back(std::make_pair("from" + std::to_string(i), std::to_string(msg.user_id)));
           items.push_back(std::make_pair("content" + std::to_string(i), msg.content));
           items.push_back(std::make_pair("timestamp" + std::to_string(i), std::to_string(msg.timestamp)));
         }
 
         send_message(client_fd, proto::SUCCESS, serialize_kv(items), current_user_id);
+        std::cout << "[DEBUG] GET_GROUP_HISTORY response sent with " << messages.size() << " messages" << std::endl;
         break;
       }
 
@@ -713,22 +740,12 @@ void handle_client(int client_fd, sockaddr_in addr) {
           const auto& g = groups[i];
           // retrieve members as CSV
           std::string membersCsv;
-          std::string memberNicksCsv;
           std::string memberNamesCsv;
           std::string memberAdminsCsv;
           if (g_pg_persistence) {
             auto members = g_pg_persistence->get_group_members(g.id);
-            auto nicknameMap = g_pg_persistence->get_group_member_nicknames(g.id);
             for (size_t j = 0; j < members.size(); ++j) {
               membersCsv += std::to_string(members[j].id);
-              // append nickname (base64-encoded) aligned with member order; if empty use empty token
-              std::string nick;
-              auto itn = nicknameMap.find(members[j].id);
-              if (itn != nicknameMap.end()) nick = itn->second;
-              // base64 encode nick to safely include special chars
-              std::string encNick = nick.empty() ? std::string() : utils::base64_encode(nick);
-              if (!memberNicksCsv.empty()) memberNicksCsv += ",";
-              memberNicksCsv += encNick;
               // append username for this member
               if (!memberNamesCsv.empty()) memberNamesCsv += ",";
               memberNamesCsv += members[j].username;
@@ -757,8 +774,6 @@ void handle_client(int client_fd, sockaddr_in addr) {
           items.push_back({"name" + std::to_string(i), g.name});
           items.push_back({"memberCount" + std::to_string(i), std::to_string((int)std::count(membersCsv.begin(), membersCsv.end(), ',') + 1)});
           items.push_back({"members" + std::to_string(i), membersCsv});
-          // include memberNicks aligned with members list (base64 encoded, comma separated)
-          items.push_back({"memberNicks" + std::to_string(i), memberNicksCsv});
           // include memberNames aligned with members list (comma separated)
           items.push_back({"memberNames" + std::to_string(i), memberNamesCsv});
           // include memberAdmins aligned with members list (0 or 1, comma separated)
@@ -1159,96 +1174,7 @@ void handle_client(int client_fd, sockaddr_in addr) {
         break;
       }
 
-      case proto::SET_GROUP_NICKNAME: {
-        auto kv = parse_kv(payload);
-        int gid = std::stoi(kv["groupId"]);
-        int uid = std::stoi(kv["userId"]);
-        std::string nick = kv.count("nick") ? kv["nick"] : std::string();
-        bool ok = false;
-
-        {
-          std::lock_guard<std::mutex> lock(g_mutex);
-          auto it = g_groups.find(gid);
-          if (it != g_groups.end() && it->second.members.count(uid)) {
-            // Store nickname in-memory and persist to DB if available
-            it->second.member_nicknames[uid] = nick;
-            ok = true;
-            if (g_pg_persistence) {
-              if (!g_pg_persistence->set_group_nickname(gid, uid, nick)) {
-                std::cerr << "[PERSISTENCE] Failed to persist nickname for gid=" << gid << " uid=" << uid << std::endl;
-              }
-            }
-          }
-        }
-
-        if (ok) {
-          // Broadcast system message about nickname change
-          try {
-            long long ts_ms = std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::system_clock::now().time_since_epoch()).count();
-            std::string actor;
-            std::string target;
-            {
-              std::lock_guard<std::mutex> lock(g_mutex);
-              auto uit = g_users_by_id.find((int)current_user_id);
-              actor = (uit != g_users_by_id.end() ? uit->second.username : ("User " + std::to_string((int)current_user_id)));
-              auto tit = g_users_by_id.find(uid);
-              target = (tit != g_users_by_id.end() ? tit->second.username : ("User " + std::to_string(uid)));
-            }
-            std::string sys;
-            if (uid == (int)current_user_id) {
-              // User set their own nickname
-              if (nick.empty()) {
-                sys = actor + " removed their nickname";
-              } else {
-                sys = actor + " set their nickname to \"" + nick + "\"";
-              }
-            } else {
-              // Someone set nickname for another user (admin capability)
-              if (nick.empty()) {
-                sys = actor + " removed " + target + "'s nickname";
-              } else {
-                sys = actor + " set " + target + "'s nickname to \"" + nick + "\"";
-              }
-            }
-            
-            // Persist system message to DB
-            if (g_pg_persistence) {
-              if (!g_pg_persistence->save_group_message(gid, 0, sys, ts_ms)) {
-                std::cerr << "[PERSISTENCE] Failed to persist system message for SET_GROUP_NICKNAME" << std::endl;
-              }
-            }
-            
-            // Broadcast to all group members
-            std::vector<int> membersToNotify;
-            {
-              std::lock_guard<std::mutex> lock(g_mutex);
-              auto git = g_groups.find(gid);
-              if (git != g_groups.end()) {
-                for (auto& [mid, _] : git->second.members) {
-                  membersToNotify.push_back(mid);
-                }
-              }
-            }
-            auto out = serialize_kv({{"groupId", std::to_string(gid)}, {"senderId", "0"}, {"message", sys}, {"timestamp", std::to_string(ts_ms)}});
-            for (int mid : membersToNotify) {
-              int fd = -1;
-              {
-                std::lock_guard<std::mutex> lock(g_mutex);
-                auto it = g_online_clients.find(mid);
-                if (it != g_online_clients.end()) fd = it->second;
-              }
-              if (fd != -1) send_message(fd, proto::GROUP_MESSAGE, out, 0);
-              else enqueue_offline(mid, proto::GROUP_MESSAGE, out, 0);
-            }
-          } catch (...) {}
-          
-          send_message(client_fd, proto::SUCCESS, "Nickname set", current_user_id);
-        } else {
-          send_message(client_fd, proto::ERROR, "Set nickname failed", current_user_id);
-        }
-        break;
-      }
+      // SET_GROUP_NICKNAME removed - nickname functionality no longer supported
       
       case proto::REMOVE_FROM_GROUP: {
         auto kv = parse_kv(payload);
@@ -1505,6 +1431,9 @@ void handle_client(int client_fd, sockaddr_in addr) {
         std::vector<int> members;
         std::string out;
         
+        std::cout << "[DEBUG] GROUP_MESSAGE: gid=" << gid << " from userId=" << current_user_id 
+                  << " message='" << message << "'" << std::endl;
+        
         {
           bool member_ok = false;
           // If we have DB persistence, trust the DB for membership and fetch members from DB
@@ -1512,9 +1441,12 @@ void handle_client(int client_fd, sockaddr_in addr) {
             if (g_pg_persistence->is_group_member(gid, (int)current_user_id)) {
               member_ok = true;
               auto db_members = g_pg_persistence->get_group_members(gid);
+              std::cout << "[DEBUG] Group has " << db_members.size() << " members" << std::endl;
               for (const auto& mu : db_members) {
                 if (mu.id != (int)current_user_id) members.push_back(mu.id);
               }
+            } else {
+              std::cerr << "[DEBUG] User " << current_user_id << " is NOT a member of group " << gid << std::endl;
             }
           } else {
             // Fallback to in-memory group map
@@ -1529,6 +1461,7 @@ void handle_client(int client_fd, sockaddr_in addr) {
           }
 
           if (!member_ok) {
+            std::cerr << "[ERROR] GROUP_MESSAGE rejected: user not in group" << std::endl;
             send_message(client_fd, proto::ERROR, "Not in group", current_user_id);
             break;
           }
@@ -1537,6 +1470,8 @@ void handle_client(int client_fd, sockaddr_in addr) {
         // Use milliseconds since epoch for timestamp
         long long ts_ms = std::chrono::duration_cast<std::chrono::milliseconds>(
             std::chrono::system_clock::now().time_since_epoch()).count();
+
+        std::cout << "[DEBUG] GROUP_MESSAGE timestamp: " << ts_ms << std::endl;
 
         out = serialize_kv({
           {"groupId", std::to_string(gid)},
@@ -1547,11 +1482,18 @@ void handle_client(int client_fd, sockaddr_in addr) {
         
         // Persist group message to database if available
         if (g_pg_persistence) {
-          if (!g_pg_persistence->save_group_message(gid, (int)current_user_id, message, ts_ms)) {
+          std::cout << "[DEBUG] Attempting to save group message to DB..." << std::endl;
+          bool saved = g_pg_persistence->save_group_message(gid, (int)current_user_id, message, ts_ms);
+          if (!saved) {
             std::cerr << "[PERSISTENCE] Failed to save group message for group " << gid << std::endl;
+          } else {
+            std::cout << "[DEBUG] Group message saved to DB successfully" << std::endl;
           }
+        } else {
+          std::cerr << "[DEBUG] No DB persistence - group message not saved" << std::endl;
         }
 
+        std::cout << "[DEBUG] Broadcasting to " << members.size() << " members" << std::endl;
         for (int uid : members) {
           int fd = -1;
           {
@@ -1560,8 +1502,10 @@ void handle_client(int client_fd, sockaddr_in addr) {
             if (it != g_online_clients.end()) fd = it->second;
           }
           if (fd != -1) {
+            std::cout << "[DEBUG] Sending to online member userId=" << uid << std::endl;
             send_message(fd, proto::GROUP_MESSAGE, out, current_user_id);
           } else {
+            std::cout << "[DEBUG] Queueing offline for member userId=" << uid << std::endl;
             enqueue_offline(uid, proto::GROUP_MESSAGE, out, current_user_id);
           }
         }

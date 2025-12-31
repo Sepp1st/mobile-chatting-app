@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tndat/mobile-chatting-app/server-cpp/src/network_utils.cpp" "CMakeFiles/test_client.dir/src/network_utils.cpp.o" "gcc" "CMakeFiles/test_client.dir/src/network_utils.cpp.o.d"
-  "/home/tndat/mobile-chatting-app/server-cpp/tools/test_client.cpp" "CMakeFiles/test_client.dir/tools/test_client.cpp.o" "gcc" "CMakeFiles/test_client.dir/tools/test_client.cpp.o.d"
+  "/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/network_utils.cpp" "CMakeFiles/test_client.dir/src/network_utils.cpp.o" "gcc" "CMakeFiles/test_client.dir/src/network_utils.cpp.o.d"
+  "/home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/tools/test_client.cpp" "CMakeFiles/test_client.dir/tools/test_client.cpp.o" "gcc" "CMakeFiles/test_client.dir/tools/test_client.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

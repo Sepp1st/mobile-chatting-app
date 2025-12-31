@@ -1,7 +1,7 @@
 CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o: \
- /home/tndat/mobile-chatting-app/server-cpp/src/persistence_pg.cpp \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.cpp \
  /usr/include/stdc-predef.h \
- /home/tndat/mobile-chatting-app/server-cpp/src/persistence_pg.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/src/persistence_pg.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -160,9 +160,9 @@ CMakeFiles/chat_server.dir/src/persistence_pg.cpp.o: \
  /usr/include/postgresql/libpq-fe.h \
  /usr/include/postgresql/postgres_ext.h \
  /usr/include/postgresql/pg_config_ext.h \
- /home/tndat/mobile-chatting-app/server-cpp/include/protocol.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/protocol.h \
  /usr/include/c++/13/cstdint \
- /home/tndat/mobile-chatting-app/server-cpp/include/data_models.h \
+ /home/quang/Documents/GitHub/mobile-chatting-app/server-cpp/include/data_models.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
